@@ -30,7 +30,7 @@ Then restart Claude Code. The MCP server connects automatically.
 
 ### Option 2 — Via Claude Code marketplace
 
-If you have the `claude-crypto-research-tools` marketplace installed, type this directly in Claude Code:
+If you have the `claude-crypto-research-tools` marketplace and setup-skills-master-mcp plugin installed, type this directly in Claude Code:
 
 ```
 /setup-skills-master-mcp
