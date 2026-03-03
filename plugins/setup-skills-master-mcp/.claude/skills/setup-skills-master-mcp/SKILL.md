@@ -1,6 +1,12 @@
 ---
 name: setup-skills-master-mcp
-description: Install and configure the skills-master MCP server for Claude Code. Use when setting up skills-master-mcp, adding the SkillsMCP server to a project, or when the MCP server fails to start because node is not found in PATH.
+triggers:
+  - /setup-skills-master-mcp
+description: >
+  Install and configure the skills-master MCP server for Claude Code.
+  Activates via /setup-skills-master-mcp.
+  Use when setting up skills-master-mcp, adding the SkillsMCP server to a project,
+  or when the MCP server fails to start because node is not found in PATH.
 allowed-tools: Bash, Read, Write, Edit
 ---
 
