@@ -1,0 +1,189 @@
+[
+  {
+    "name": "skillvet",
+    "description": "Security scanner — 48 checks for malware, credential theft, prompt injection, exfiltration, obfuscation, homograph attacks, ANSI injection, and campaign-specific attack patterns. Run before installing any community skill.",
+    "author": "oakencore",
+    "source": "openclaw/skills",
+    "github": "https://github.com/openclaw/skills/tree/main/skills/oakencore/skillvet",
+    "stars": 1434,
+    "category": "security",
+    "vetted": true,
+    "install": "npx skills add \"openclaw/skills\" -s \"skillvet\" -a claude-code -y"
+  },
+  {
+    "name": "prd",
+    "description": "Generate high-quality Product Requirements Documents with executive summaries, user stories, technical specifications, and risk analysis.",
+    "author": "github",
+    "source": "github/awesome-copilot",
+    "github": "https://github.com/github/awesome-copilot/tree/main/skills/prd",
+    "stars": 22473,
+    "category": "document-creation",
+    "vetted": true,
+    "install": "npx skills add \"github/awesome-copilot\" -s \"prd\" -a claude-code -y"
+  },
+  {
+    "name": "senior-architect",
+    "description": "Software architecture skill for designing scalable systems. Covers architecture diagrams, system design patterns, tech stack decisions, and dependency analysis.",
+    "author": "davila7",
+    "source": "davila7/claude-code-templates",
+    "github": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/senior-architect",
+    "stars": 20807,
+    "category": "document-creation",
+    "vetted": true,
+    "install": "npx skills add \"davila7/claude-code-templates\" -s \"senior-architect\" -a claude-code -y"
+  },
+  {
+    "name": "design-serialization-schema",
+    "description": "Design serialization schemas using JSON Schema, Protocol Buffers, or Avro. Covers versioning, backwards compatibility, validation rules, and evolution strategies.",
+    "author": "pjt222",
+    "source": "pjt222/agent-almanac",
+    "github": "https://github.com/pjt222/agent-almanac/tree/main/skills/design-serialization-schema",
+    "stars": 0,
+    "category": "document-creation",
+    "vetted": true,
+    "install": "npx skills add \"pjt222/agent-almanac\" -s \"design-serialization-schema\" -a claude-code -y"
+  },
+  {
+    "name": "prompt-engineering",
+    "description": "Expert guide on prompt engineering patterns, best practices, and optimization techniques for agent configs and LLM behavior.",
+    "author": "davila7",
+    "source": "davila7/claude-code-templates",
+    "github": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/prompt-engineering",
+    "stars": 21677,
+    "category": "document-creation",
+    "vetted": true,
+    "install": "npx skills add \"davila7/claude-code-templates\" -s \"prompt-engineering\" -a claude-code -y"
+  },
+  {
+    "name": "web3-research",
+    "description": "Web3, cryptocurrency, and blockchain research framework with Tavily integration for comprehensive crypto market and technology analysis.",
+    "author": "XSpoonAi",
+    "source": "XSpoonAi/spoon-core",
+    "github": "https://github.com/XSpoonAi/spoon-core/tree/main/examples/skills/web3-research",
+    "stars": 365,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"XSpoonAi/spoon-core\" -s \"web3-research\" -a claude-code -y"
+  },
+  {
+    "name": "competitive-analysis",
+    "description": "Research competitors and compare positioning, messaging, content strategy, and market presence. Includes battlecard generation and content gap analysis.",
+    "author": "anthropics",
+    "source": "anthropics/knowledge-work-plugins",
+    "github": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/competitive-analysis",
+    "stars": 7505,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"anthropics/knowledge-work-plugins\" -s \"competitive-analysis\" -a claude-code -y"
+  },
+  {
+    "name": "brand-voice-extractor",
+    "description": "Extract and document authentic writing voice from content samples. Produces a reusable voice profile with personality traits, tone spectrum, vocabulary guide, and rhythm patterns.",
+    "author": "BrianRWagner",
+    "source": "BrianRWagner/ai-marketing-claude-code-skills",
+    "github": "https://github.com/BrianRWagner/ai-marketing-claude-code-skills/tree/main/voice-extractor",
+    "stars": 113,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"BrianRWagner/ai-marketing-claude-code-skills\" -s \"voice-extractor\" -a claude-code -y"
+  },
+  {
+    "name": "x-research",
+    "description": "General-purpose X/Twitter research agent. Searches X for real-time perspectives, dev discussions, product feedback, breaking news, and expert opinions. Last 7 days.",
+    "author": "rohunvora",
+    "source": "rohunvora/x-research-skill",
+    "github": "https://github.com/rohunvora/x-research-skill",
+    "stars": 882,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"rohunvora/x-research-skill\" -s \"x-research\" -a claude-code -y"
+  },
+  {
+    "name": "x-mastery",
+    "description": "Complete X/Twitter algorithm mastery — engagement weights, viral formulas, shadow ban avoidance, thread optimization, and growth strategies based on X's open-source code.",
+    "author": "lxgicstudios",
+    "source": "openclaw/skills",
+    "github": "https://github.com/openclaw/skills/tree/main/skills/lxgicstudios/x-mastery",
+    "stars": 1690,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"openclaw/skills\" -s \"x-mastery\" -a claude-code -y"
+  },
+  {
+    "name": "twitter-algorithm-optimizer",
+    "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights. Rewrites tweets to improve engagement and visibility.",
+    "author": "ComposioHQ",
+    "source": "ComposioHQ/awesome-claude-skills",
+    "github": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/twitter-algorithm-optimizer",
+    "stars": 39050,
+    "category": "domain",
+    "vetted": true,
+    "install": "npx skills add \"ComposioHQ/awesome-claude-skills\" -s \"twitter-algorithm-optimizer\" -a claude-code -y"
+  },
+  {
+    "name": "multi-agent-coordination",
+    "description": "Coordinate multiple agents in parallel or sequential workflows. Covers delegation, agent switching, task decomposition, and file-based handoff patterns.",
+    "author": "MadAppGang",
+    "source": "MadAppGang/claude-code",
+    "github": "https://github.com/MadAppGang/claude-code/tree/main/plugins/multimodel/skills/multi-agent-coordination",
+    "stars": 0,
+    "category": "orchestration",
+    "vetted": true,
+    "install": "npx skills add \"MadAppGang/claude-code\" -s \"multi-agent-coordination\" -a claude-code -y"
+  },
+  {
+    "name": "multi-agent-analysis",
+    "description": "Analyze coordination patterns, handoff mechanisms, and state sharing in multi-agent systems. Maps communication protocols and compares orchestration models.",
+    "author": "Dowwie",
+    "source": "Dowwie/agent_framework_study",
+    "github": "https://github.com/Dowwie/agent_framework_study/tree/main/.claude/skills/multi-agent-analysis",
+    "stars": 0,
+    "category": "orchestration",
+    "vetted": true,
+    "install": "npx skills add \"Dowwie/agent_framework_study\" -s \"multi-agent-analysis\" -a claude-code -y"
+  },
+  {
+    "name": "swarm-orchestration",
+    "description": "Hierarchical multi-agent swarm coordination for complex tasks spanning 3+ files, new features, cross-module refactoring, and API changes with tests.",
+    "author": "ruvnet",
+    "source": "ruvnet/ruflo",
+    "github": "https://github.com/ruvnet/ruflo/tree/main/.agents/skills/swarm-orchestration",
+    "stars": 0,
+    "category": "orchestration",
+    "vetted": true,
+    "install": "npx skills add \"ruvnet/ruflo\" -s \"swarm-orchestration\" -a claude-code -y"
+  },
+  {
+    "name": "agent-memory-systems",
+    "description": "Architecture of agent memory: short-term (context window), long-term (vector stores), and cognitive architectures. Covers chunking, embedding, and retrieval strategies.",
+    "author": "davila7",
+    "source": "davila7/claude-code-templates",
+    "github": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/agent-memory-systems",
+    "stars": 21677,
+    "category": "orchestration",
+    "vetted": true,
+    "install": "npx skills add \"davila7/claude-code-templates\" -s \"agent-memory-systems\" -a claude-code -y"
+  },
+  {
+    "name": "humanizer",
+    "description": "Remove AI writing patterns from text. Fixes inflated symbolism, promotional language, -ing phrase abuse, vague attributions, em dash overuse, rule of three, AI vocabulary words, and sycophantic tone.",
+    "author": "blader",
+    "source": "blader/humanizer",
+    "github": "https://github.com/blader/humanizer",
+    "stars": 7352,
+    "category": "quality",
+    "vetted": true,
+    "install": "npx skills add \"blader/humanizer\" -s \"humanizer\" -a claude-code -y"
+  },
+  {
+    "name": "validator-role-skill",
+    "description": "Professional QA and code review skill. Ensures code quality, comprehensive test coverage, standards compliance, and security through rigorous validation workflows.",
+    "author": "enuno",
+    "source": "NeverSight/learn-skills.dev",
+    "github": "https://github.com/NeverSight/learn-skills.dev/tree/main/data/skills-md/enuno/claude-command-and-control/validator-role-skill",
+    "stars": 41,
+    "category": "quality",
+    "vetted": true,
+    "install": "npx skills add \"NeverSight/learn-skills.dev\" -s \"validator-role-skill\" -a claude-code -y"
+  }
+]
