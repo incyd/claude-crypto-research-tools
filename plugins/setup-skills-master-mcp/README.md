@@ -14,15 +14,46 @@ Claude will search the marketplace, show you results, and install with one confi
 
 ---
 
-## Quick install
+## Install
 
-One line in your project directory:
+### Option 1 — One-liner (recommended)
+
+Run this in your project directory:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/incyd/skills-master-mcp-setup-skill/main/install.sh | bash
 ```
 
 Then restart Claude Code. The MCP server connects automatically.
+
+---
+
+### Option 2 — Via Claude Code marketplace
+
+If you have the `claude-crypto-research-tools` marketplace installed, type this directly in Claude Code:
+
+```
+/setup-skills-master-mcp
+```
+
+Claude will run the skill and walk you through the setup interactively.
+
+To install the marketplace first:
+
+```bash
+/plugin marketplace add incyd/claude-crypto-research-tools
+/plugin install setup-skills-master-mcp
+```
+
+---
+
+### Option 3 — Manual
+
+```bash
+mkdir -p .claude/skills/setup-skills-master-mcp
+curl -fsSL https://raw.githubusercontent.com/incyd/skills-master-mcp-setup-skill/main/.claude/skills/setup-skills-master-mcp/SKILL.md \
+  -o .claude/skills/setup-skills-master-mcp/SKILL.md
+```
 
 ---
 
@@ -45,18 +76,3 @@ After the MCP server is running, the `setup-skills-master-mcp` skill gives Claud
 - Search the skills marketplace by keyword or description
 - Preview a skill before installing it
 - Install skills into `.claude/skills/` in your project
-
-Trigger it by saying things like:
-
-> Set up skills-master-mcp
-> The MCP server isn't connecting — can you fix it?
-
----
-
-## Manual install (no curl)
-
-```bash
-mkdir -p .claude/skills/setup-skills-master-mcp
-curl -fsSL https://raw.githubusercontent.com/incyd/skills-master-mcp-setup-skill/main/.claude/skills/setup-skills-master-mcp/SKILL.md \
-  -o .claude/skills/setup-skills-master-mcp/SKILL.md
-```
