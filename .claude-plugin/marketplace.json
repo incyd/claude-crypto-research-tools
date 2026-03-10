@@ -38,6 +38,11 @@
   ],
   "connectors": [
     {
+      "name": "kaito-mcp",
+      "path": "connectors/kaito-mcp",
+      "description": "Kaito AI crypto intelligence — sentiment, mindshare, narrative tracking, KOL signals, 15 tools"
+    },
+    {
       "name": "x-research-mcp",
       "path": "connectors/x-research-mcp",
       "description": "X/Twitter research via MCP — bearer token auth, 5 tools"

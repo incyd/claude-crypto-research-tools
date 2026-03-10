@@ -47,17 +47,17 @@ Requires: Kaito AI · X API connector · Tavily
 
 ### 🔌 MCP Connectors
 
-Three options for connecting Claude to live X/Twitter and web data:
-
 | Connector | Best for | Cost | Filtering |
 |-----------|----------|------|-----------|
-| [Native X AI MCP](./connectors/x-research-mcp/) | Trending narratives, topic discovery | 💸 Expensive | Excellent |
+| [Kaito AI MCP](./connectors/kaito-mcp/) | Narrative discovery, mindshare tracking, KOL signals, sentiment | Paid API | Excellent |
+| [Native X AI MCP](./connectors/x-research-mcp/) | Broad X/Twitter search, topic discovery | 💸 Expensive | Excellent |
 | [Netrows X MCP](./connectors/netrows-x-mcp/) | Pulling KOL tweets, account research | ✅ Free tier + good value | Limited |
 | [Tavily MCP](./connectors/tavily-mcp/) | Web context, TVL data, DeFi research | ✅ Generous free tier | N/A |
 
 **When to use which:**
 
-- **Native X AI MCP** — best-in-class topic search and filter criteria (likes, impressions, date ranges). Ideal for trending narrative research and broad signal discovery. Use it when quality of results matters most and cost isn't a constraint.
+- **Kaito AI MCP** — purpose-built for crypto intelligence. Tracks narrative mindshare, token sentiment over time, smart follower signals, and KOL activity. The only connector that tells you what narratives are gaining or losing momentum across the whole market. Primary data source for V3 Daily KOL.
+- **Native X AI MCP** — best-in-class topic search and filter criteria (likes, impressions, date ranges). Ideal for broad signal discovery when you want to go deeper on a specific topic or timeframe. Use it when quality of results matters most and cost isn't a constraint.
 - **Netrows X MCP** — great free tier and solid overall value. Filtering is more limited but it excels at pulling tweets from individual accounts and KOLs. The go-to for account-level research without needing an X developer account.
 - **Tavily** — purpose-built for AI agents, not rate-limited like search engines. Best for pulling web context: protocol docs, TVL data from DeFiLlama, news articles, on-chain analytics. Use alongside an X connector for full coverage.
 
@@ -91,6 +91,27 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
 ### V3 Daily KOL
 
 See the [full setup guide](./plugins/v3-daily-kol/). Requires Kaito AI, an X API connector, and Tavily — all configured via the connectors below.
+
+---
+
+### Kaito AI MCP — Claude Code
+
+1. Get an API key at [kaito.ai](https://kaito.ai)
+2. Add to `.mcp.json`:
+   ```json
+   {
+     "mcpServers": {
+       "kaito": {
+         "command": "npx",
+         "args": ["-y", "kaito-mcp-server@latest"],
+         "env": { "KAITO_API_KEY": "your-api-key-here" }
+       }
+     }
+   }
+   ```
+3. Restart Claude Code.
+
+→ [Full setup guide](./connectors/kaito-mcp/)
 
 ---
 
@@ -166,6 +187,7 @@ Or via marketplace: `/setup-skills-master-mcp`
 
 ```
 connectors/
+  kaito-mcp/               ← Kaito AI crypto intelligence (15 tools)
   x-research-mcp/          ← Native X AI MCP (bearer token, 5 tools)
   netrows-x-mcp/           ← Netrows X MCP (API key, 14 tools)
   tavily-mcp/              ← Tavily web search MCP
