@@ -14,11 +14,38 @@ The goal is simple: **position your brand in the highest-signal conversations in
 
 ---
 
+## Featured Plugin
+
+### [V3 Daily KOL](./plugins/v3-daily-kol/)
+
+A four-agent Claude pipeline that runs every morning to keep you in the right X/Twitter conversations — and tells you what to post.
+
+Every day it pulls signals from your topic clusters and thought leader feeds, scores posts by engagement weight, and outputs:
+
+- **20+ engagement replies** in your voice, ready to post
+- **2–3 own-post recommendations** with supporting data and draft copy
+- A **growing knowledge base** of narratives in your space, updated weekly
+
+Four agents, clear contracts, append-only data — nothing is ever lost.
+
+| Agent | Model | When | What it does |
+|-------|-------|------|-------------|
+| ① Onboarding | Opus 4.6 | Once | Builds your account profile from 200 posts — topics, keywords, voice, KOL list |
+| ② Daily Pull | Sonnet 4.6 | Daily | Pulls topic signals (Kaito + X API), TL timelines, your own posts |
+| ③ Analytics | Opus 4.6 | Daily | Scores posts, generates replies + post recommendations, mandatory humanizer pass |
+| ④ Weekly Learning | Opus 4.6 | Sundays | Reviews what worked, proposes KB updates and system improvements |
+
+Requires: Kaito AI · X API connector · Tavily
+
+→ [Full documentation](./plugins/v3-daily-kol/)
+
+---
+
 ## What's Inside
 
 ### 🔌 MCP Connectors
 
-Three options for connecting Claude to live data. Pick the one that fits your workflow:
+Three options for connecting Claude to live X/Twitter and web data:
 
 | Connector | Best for | Cost | Filtering |
 |-----------|----------|------|-----------|
@@ -38,7 +65,8 @@ Three options for connecting Claude to live data. Pick the one that fits your wo
 
 | Plugin | What it does |
 |--------|-------------|
-| [Setup Skills Master MCP](./plugins/setup-skills-master-mcp/) | Installs and configures the skills-master MCP server so Claude can discover and install skills from within any conversation. Run `/setup-skills-master-mcp` to start. |
+| [V3 Daily KOL](./plugins/v3-daily-kol/) | Four-agent daily pipeline — pull signals, generate replies + post recs, build narrative knowledge base |
+| [Setup Skills Master MCP](./plugins/setup-skills-master-mcp/) | Installs the skills-master MCP server so Claude can discover and install skills from within any conversation. Run `/setup-skills-master-mcp` to start. |
 
 ---
 
@@ -58,14 +86,20 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
 
 ## Quick Setup
 
+### V3 Daily KOL
+
+See the [full setup guide](./plugins/v3-daily-kol/). Requires Kaito AI, an X API connector, and Tavily — all configured via the connectors below.
+
+---
+
 ### Native X AI MCP — Claude.ai
 
 1. Go to [Claude.ai → Settings → Connectors → Add custom connector](https://claude.ai/settings)
-2. Paste the URL:
+2. Paste:
    ```
    https://x-research-mcp.onrender.com/mcp
    ```
-3. Ask Claude to call `setup_session` with your X API bearer token — you'll receive a permanent session URL tied to your token.
+3. Ask Claude to call `setup_session` with your X bearer token — you'll get a permanent session URL.
 4. Replace the URL with your session URL. Done.
 
 → [Full setup guide](./connectors/x-research-mcp/)
@@ -75,7 +109,7 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
 ### Netrows X MCP — Claude Code or Claude.ai
 
 1. Get a Netrows API key at [netrows.com](https://www.netrows.com)
-2. Add to `.mcp.json` in your project:
+2. Add to `.mcp.json`:
    ```json
    {
      "mcpServers": {
@@ -85,7 +119,6 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
      }
    }
    ```
-   Or add the same URL directly in Claude.ai → Settings → Connectors.
 3. Restart Claude Code.
 
 → [Full setup guide](./connectors/netrows-x-mcp/)
@@ -102,16 +135,14 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
        "tavily": {
          "command": "npx",
          "args": ["-y", "tavily-mcp"],
-         "env": {
-           "TAVILY_API_KEY": "tvly-YOUR_KEY_HERE"
-         }
+         "env": { "TAVILY_API_KEY": "tvly-YOUR_KEY_HERE" }
        }
      }
    }
    ```
 3. Restart Claude Code.
 
-> **nvm users:** Claude Code doesn't inherit your shell's PATH. If `node` isn't found, run `/setup-skills-master-mcp` for a guided fix.
+> **nvm users:** Claude Code doesn't inherit your shell's PATH. Run `/setup-skills-master-mcp` for a guided fix.
 
 → [Full setup guide](./connectors/tavily-mcp/)
 
@@ -119,22 +150,11 @@ Community skills curated for crypto research workflows. All passed skillvet's 48
 
 ### Setup Skills Master MCP — Claude Code
 
-Gives Claude the ability to search, preview, and install skills from within any conversation — no terminal needed.
-
-**Fastest install:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/incyd/skills-master-mcp-setup-skill/main/install.sh | bash
 ```
 
-**Via marketplace (if already installed):**
-```
-/setup-skills-master-mcp
-```
-
-**Via plugin system:**
-```bash
-/plugin install setup-skills-master-mcp@claude-crypto-research-tools
-```
+Or via marketplace: `/setup-skills-master-mcp`
 
 → [Plugin docs](./plugins/setup-skills-master-mcp/)
 
@@ -148,6 +168,7 @@ connectors/
   netrows-x-mcp/           ← Netrows X MCP (API key, 14 tools)
   tavily-mcp/              ← Tavily web search MCP
 plugins/
+  v3-daily-kol/            ← 4-agent daily X engagement pipeline
   setup-skills-master-mcp/ ← Claude Code skill + MCP installer
 skills/
   skills-registry.json     ← Machine-readable source of truth (17 skills)
