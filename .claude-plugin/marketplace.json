@@ -1,7 +1,8 @@
 {
   "name": "claude-crypto-research-tools",
   "owner": {
-    "name": "Ash"
+    "name": "Ash",
+    "email": "pasha.datsiuk@gmail.com"
   },
   "metadata": {
     "description": "Claude Code plugins and MCP connectors for crypto research",
