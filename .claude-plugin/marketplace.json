@@ -1,61 +1,32 @@
 {
   "name": "claude-crypto-research-tools",
   "owner": {
-    "name": "incyd"
+    "name": "Ash"
   },
   "metadata": {
-    "description": "Claude Code plugins and MCP connectors for crypto research"
+    "description": "Claude Code plugins and MCP connectors for crypto research",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "v3-daily-kol",
-      "source": {
-        "source": "github",
-        "repo": "incyd/claude-crypto-research-tools",
-        "path": "plugins/v3-daily-kol"
-      },
+      "source": "./plugins/v3-daily-kol",
       "description": "Four-agent daily X/Twitter research and engagement pipeline — pulls signals, scores by engagement, generates 20+ voice-matched replies and own-post recommendations every morning",
+      "version": "3.0.0",
       "author": {
-        "name": "incyd"
+        "name": "Ash"
       },
-      "strict": false,
-      "skills": ["./"]
+      "strict": false
     },
     {
       "name": "setup-skills-master-mcp",
-      "source": {
-        "source": "github",
-        "repo": "incyd/claude-crypto-research-tools",
-        "path": "plugins/setup-skills-master-mcp"
-      },
+      "source": "./plugins/setup-skills-master-mcp",
       "description": "Install and configure the skills-master MCP server for Claude Code. Trigger: /setup-skills-master-mcp",
+      "version": "1.0.0",
       "author": {
-        "name": "incyd"
+        "name": "Ash"
       },
-      "strict": false,
-      "skills": ["./"]
-    }
-  ],
-  "connectors": [
-    {
-      "name": "kaito-mcp",
-      "path": "connectors/kaito-mcp",
-      "description": "Kaito AI crypto intelligence — sentiment, mindshare, narrative tracking, KOL signals, 15 tools"
-    },
-    {
-      "name": "x-research-mcp",
-      "path": "connectors/x-research-mcp",
-      "description": "X/Twitter research via MCP — bearer token auth, 5 tools"
-    },
-    {
-      "name": "netrows-x-mcp",
-      "path": "connectors/netrows-x-mcp",
-      "description": "X/Twitter research via Netrows API — no X developer account needed, 14 tools"
-    },
-    {
-      "name": "tavily-mcp",
-      "path": "connectors/tavily-mcp",
-      "description": "Real-time web search via Tavily AI — research and fact-checking"
+      "strict": false
     }
   ]
 }
