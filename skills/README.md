@@ -1,6 +1,6 @@
 # Skills Registry
 
-17 vetted Claude Code skills for crypto research, content, and agent engineering.
+18 vetted Claude Code skills for crypto research, content, and agent engineering.
 
 All skills in this registry passed [skillvet](https://github.com/openclaw/skills/tree/main/skills/oakencore/skillvet)'s 48-check security scan before inclusion — covering malware, credential theft, prompt injection, exfiltration, obfiltration, obfuscation, homograph attacks, and ANSI injection.
 
@@ -17,6 +17,16 @@ Install skillvet before anything else. Use it to scan any community skill before
 | Skill | Author | Stars | Install |
 |-------|--------|-------|---------|
 | [skillvet](https://github.com/openclaw/skills/tree/main/skills/oakencore/skillvet) | oakencore | ★ 1,434 | `npx skills add "openclaw/skills" -s "skillvet" -a claude-code -y` |
+
+---
+
+## ⚙️ Setup
+
+Skills that configure your Claude Code environment. Run these once when setting up a new project.
+
+| Skill | Author | Install |
+|-------|--------|---------|
+| [setup-skills-master-mcp](../plugins/setup-skills-master-mcp/) | incyd | `/plugin install setup-skills-master-mcp@claude-crypto-research-tools` or run `/setup-skills-master-mcp` |
 
 ---
 

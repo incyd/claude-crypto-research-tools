@@ -68,17 +68,17 @@ Requires: Kaito AI · X API connector · Tavily
 | Plugin | What it does |
 |--------|-------------|
 | [V3 Daily KOL](./plugins/v3-daily-kol/) | Personalized context database + 4-agent daily pipeline — discovers relevant narratives, generates replies and post recs |
-| [Setup Skills Master MCP](./plugins/setup-skills-master-mcp/) | Installs the skills-master MCP server so Claude can discover and install skills from within any conversation. Run `/setup-skills-master-mcp` to start. |
 
 ---
 
-### 📦 Skills — 17 vetted
+### 📦 Skills — 18 vetted
 
 Community skills curated for crypto research workflows. All passed skillvet's 48-check security scan. → [Full catalog](./skills/) · [Install commands](./skills/INSTALL.md)
 
 | Category | Skills | Count |
 |----------|--------|-------|
 | [🔒 Security](./skills/README.md#security-run-this-first) | skillvet | 1 |
+| [⚙️ Setup](./skills/README.md#setup) | [setup-skills-master-mcp](./plugins/setup-skills-master-mcp/) | 1 |
 | [🌐 Domain](./skills/README.md#domain-crypto-web3-xtwitter) | x-research, x-mastery, twitter-algorithm-optimizer, web3-research, competitive-analysis, brand-voice-extractor | 6 |
 | [📄 Document Creation](./skills/README.md#document-creation) | prd, senior-architect, prompt-engineering, design-serialization-schema | 4 |
 | [🤖 Orchestration](./skills/README.md#orchestration) | multi-agent-coordination, multi-agent-analysis, swarm-orchestration, agent-memory-systems | 4 |
